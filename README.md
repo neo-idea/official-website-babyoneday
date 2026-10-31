@@ -4,10 +4,14 @@
 
 Static, dependency-free production site.
 
-- Canonical home: `https://babyoneday.zpad.app/`
-- Support: `https://babyoneday.zpad.app/support.html`
-- Privacy: `https://babyoneday.zpad.app/privacy-policy.html`
-- Terms: `https://babyoneday.zpad.app/terms-of-service.html`
+- Chinese home (default): `https://babyoneday.zpad.app/`
+- English home: `https://babyoneday.zpad.app/en/`
+- Chinese support / privacy / terms: `/support.html`, `/privacy-policy.html`, `/terms-of-service.html`
+- English support / privacy / terms: `/en/support.html`, `/en/privacy-policy.html`, `/en/terms-of-service.html`
+
+The app routes mainland-China (`CN`) devices to the Chinese pages and all other
+regions to the English pages. Both language versions expose equivalent content,
+per-page canonical URLs, language switches, and `hreflang` alternates.
 
 ## Deployment
 

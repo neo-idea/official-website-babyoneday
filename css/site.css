@@ -172,6 +172,16 @@ a:hover { text-decoration-thickness: 2px; }
   color: var(--p-primary-deep);
 }
 
+.language-switch {
+  border: 1px solid rgba(123,86,127,.18);
+  background: #fff;
+  color: var(--p-primary-deep);
+}
+
+@media (max-width: 680px) {
+  .language-switch { margin-left: auto; }
+}
+
 .hero {
   position: relative;
   overflow: hidden;
