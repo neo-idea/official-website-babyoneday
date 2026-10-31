@@ -10,6 +10,9 @@ screenshot project. Homepage images are locale-specific WebP files
 `assets/social-zh.jpg` and `assets/social-en.jpg` are the 1.20:1 locale-specific
 Open Graph/Twitter share cards. Each homepage image exposes 360w / 480w / 720w
 candidates so phones do not download the retina-sized capture unnecessarily.
+Product captures load eagerly: the hero uses `fetchpriority="high"` while the
+remaining visuals use `fetchpriority="low"`, so full-page marketing screenshots
+never contain lazy-loading placeholders without hurting the LCP resource race.
 Legal and support pages intentionally keep a narrower reading layout through
 `<body class="legal">.
 The home pages also include localized Open Graph/Twitter cards,
