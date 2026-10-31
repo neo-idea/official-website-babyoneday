@@ -4,6 +4,12 @@
 
 Static, dependency-free production site.
 
+The home page uses the latest bilingual product captures from the iOS
+screenshot project. Homepage images are locale-specific WebP files
+(`home-zh.webp`, `home-en.webp`, and so on); `assets/social-zh.jpg` and `assets/social-en.jpg`
+are the 1.20:1 locale-specific Open Graph/Twitter share cards. Legal and support pages intentionally
+keep a narrower reading layout through `<body class="legal">.
+
 - Chinese home (default): `https://babyoneday.zpad.app/`
 - English home: `https://babyoneday.zpad.app/en/`
 - Chinese support / privacy / terms: `/support.html`, `/privacy-policy.html`, `/terms-of-service.html`
