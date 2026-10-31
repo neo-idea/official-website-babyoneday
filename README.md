@@ -1,5 +1,7 @@
 # 一日一宝 Baby by Day official website
 
+> ⚠️ **警告：请勿直接修改此镜像仓库！本仓库属于镜像仓库**，由私有 monorepo `neo-idea/official-website` 自动同步发布，手动修改会被下次发布覆盖。
+
 Static, dependency-free production site.
 
 - Canonical home: `https://babyoneday.zpad.app/`
@@ -14,8 +16,8 @@ This directory is published by the monorepo workflow to
 mirror repository directly.
 
 The `CNAME` file must remain `babyoneday.zpad.app`. In Cloudflare DNS for
-`zpad.app`, `babyoneday` must be a DNS-only CNAME to `neo-idea.github.io` so
-GitHub Pages can issue and renew the custom-domain HTTPS certificate.
+`zpad.app`, `babyoneday` is a proxied CNAME to `neo-idea.github.io`. Cloudflare
+terminates public HTTPS and proxies the request to GitHub Pages.
 
 ## Local preview
 
