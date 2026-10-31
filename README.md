@@ -6,9 +6,14 @@ Static, dependency-free production site.
 
 The home page uses the latest bilingual product captures from the iOS
 screenshot project. Homepage images are locale-specific WebP files
-(`home-zh.webp`, `home-en.webp`, and so on); `assets/social-zh.jpg` and `assets/social-en.jpg`
-are the 1.20:1 locale-specific Open Graph/Twitter share cards. Legal and support pages intentionally
-keep a narrower reading layout through `<body class="legal">.
+(`home-zh.webp`, `home-en.webp`, and so on);
+`assets/social-zh.jpg` and `assets/social-en.jpg` are the 1.20:1 locale-specific
+Open Graph/Twitter share cards. Each homepage image exposes 360w / 480w / 720w
+candidates so phones do not download the retina-sized capture unnecessarily.
+Legal and support pages intentionally keep a narrower reading layout through
+`<body class="legal">.
+The home pages also include localized Open Graph/Twitter cards,
+`SoftwareApplication` structured data, and the Apple smart app banner.
 
 - Chinese home (default): `https://babyoneday.zpad.app/`
 - English home: `https://babyoneday.zpad.app/en/`
