@@ -23,8 +23,12 @@ The home pages also include localized Open Graph/Twitter cards,
 - Chinese support / privacy / terms: `/support.html`, `/privacy-policy.html`, `/terms-of-service.html`
 - English support / privacy / terms: `/en/support.html`, `/en/privacy-policy.html`, `/en/terms-of-service.html`
 
-The app routes mainland-China (`CN`) devices to the Chinese pages and all other
-regions to the English pages. Both language versions expose equivalent content,
+The website follows the browser's preferred language on its Chinese entry URLs:
+browsers whose primary language starts with `zh` stay on Chinese, while all
+other languages automatically enter the matching English URL. The language
+switches use `?lang=zh` / `?lang=en` and remember that choice only for the
+current browser session, so following an internal link does not undo a manual
+language choice. Both language versions expose equivalent content,
 per-page canonical URLs, language switches, and `hreflang` alternates.
 
 ## Deployment
