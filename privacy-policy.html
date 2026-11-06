@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>隐私政策 — 一日一宝 BabyOneDay</title>
-  <meta name="description" content="一日一宝 BabyOneDay 的隐私政策：本机优先保存照护记录；家庭共享在你主动开启后经你自己的 iCloud 同步；含可关闭的匿名使用统计（Firebase Analytics，不采 IDFA、无广告、无跨应用跟踪）。">
+  <meta name="description" content="一日一宝 BabyOneDay 的隐私政策：本机优先保存照护记录；家庭共享经创建者的 iCloud CloudKit 共享区同步；含可关闭的匿名使用统计（Firebase Analytics，不采 IDFA、无广告、无跨应用跟踪）。">
   <meta property="og:title" content="隐私政策 — 一日一宝 BabyOneDay">
   <meta property="og:description" content="本机优先保存照护记录；家庭共享经你的 iCloud；分析可关闭。">
   <meta property="og:type" content="website">
@@ -47,15 +47,15 @@
       <p class="eyebrow">本机优先 · Local-first</p>
       <h1 id="page-title">隐私政策</h1>
       <p class="h1-en">Privacy Policy</p>
-      <p class="lede">一日一宝把宝宝的日常照护记录当作家庭资料处理：数据先保存在这台 iPhone 上，不经过开发者自己的服务器。只有两种情况会让数据离开这台设备——你主动开启的家庭共享（经你自己的 iCloud），以及你可以在设置里关掉的匿名使用统计。</p>
+      <p class="lede">一日一宝把宝宝的日常照护记录当作家庭资料处理：数据先保存在这台 iPhone 上，不经过开发者自己的服务器。只有两种情况会让数据离开这台设备——创建者主动开启的家庭共享（经创建者 iCloud CloudKit 共享区），以及你可以在设置里关掉的匿名使用统计。</p>
       <div class="meta-row" aria-label="版本信息">
-        <span class="meta-pill">版本 <strong>1.2</strong></span>
-        <span class="meta-pill">更新日期 <strong>2026-10-15</strong></span>
+        <span class="meta-pill">版本 <strong>1.3</strong></span>
+        <span class="meta-pill">更新日期 <strong>2026-11-07</strong></span>
         <span class="meta-pill">适用范围 <strong>iPhone App</strong></span>
       </div>
       <div class="status-card">
         <div class="status-item"><b>开发者服务器</b><span>没有，数据不在我们的服务器上 No developer server</span></div>
-        <div class="status-item"><b>iCloud</b><span>家庭共享开启时启用（你的 iCloud）Only with Family Sharing</span></div>
+        <div class="status-item"><b>iCloud</b><span>家庭数据在创建者 iCloud 共享区 Family data in owner iCloud zone</span></div>
         <div class="status-item"><b>照片</b><span>只读取你选择的照片（每条记录最多 6 张） Only the photos you pick</span></div>
         <div class="status-item"><b>匿名统计</b><span>Firebase Analytics，可在设置中关闭 Opt-out available</span></div>
         <div class="status-item"><b>广告 / 跟踪</b><span>不包含 No ads or tracking</span></div>
@@ -88,7 +88,7 @@
         <ul>
           <li><strong>照护记录保存在本机 App 存储中。</strong><span class="small-en">Care records live in the app’s local storage on this iPhone.</span></li>
           <li><strong>没有开发者服务器，也没有账号系统。</strong><span class="small-en">No developer server and no account system.</span></li>
-          <li><strong>家庭共享默认关闭。</strong>只有你主动创建或加入家庭时，记录才会通过 Apple CloudKit 同步到你自己的 iCloud，并由你邀请的成员看到。<span class="small-en">Family Sharing is off by default. Enabling it syncs records to your own iCloud via CloudKit for invited members only.</span></li>
+          <li><strong>家庭共享默认关闭。</strong>创建者主动开启家庭共享后，记录会通过 Apple CloudKit 写入创建者的 iCloud 共享区，并由最多 6 位家庭成员读写；这不是 Apple 系统的“家庭共享”。<span class="small-en">BabyOneDay Family is off by default. After the owner enables it, records sync through a CloudKit shared zone in the owner’s iCloud for up to six members; it is not Apple Family Sharing.</span></li>
           <li><strong>我们使用 Firebase Analytics 做匿名使用统计，你可以在设置中关闭。</strong>它记录的是“做了什么操作”这类事件，不含宝宝昵称、备注正文或照片；不采集广告标识符（IDFA），没有广告 SDK、跨应用跟踪或用户画像。<span class="small-en">Firebase Analytics collects anonymous usage events and can be turned off in Settings. No baby names, notes, or photos; no IDFA, no ad SDKs, no cross-app tracking or profiling.</span></li>
           <li><strong>照片通过系统照片选择器或相机获取，只处理你选择或拍摄的图片（每条记录最多 6 张）。</strong><span class="small-en">Photos come from the system picker or camera; only the images you pick (up to 6 per record) are handled.</span></li>
           <li><strong>记录 CSV 导出由你主动触发，分享面板由系统处理。</strong><span class="small-en">CSV export is user-initiated and handled through the system share sheet.</span></li>
@@ -131,10 +131,11 @@
         <table class="data-table">
           <thead><tr><th scope="col">资料</th><th scope="col">例子</th><th scope="col">保存位置</th><th scope="col">家庭共享开启后</th><th scope="col">开发者是否可见</th></tr></thead>
           <tbody>
-            <tr><td>宝贝档案</td><td>昵称、阶段、参考性别、出生日期与出生身高体重、可选照片</td><td>本机 SwiftData</td><td>同步到你自己的 iCloud，被邀请的家庭成员可见</td><td>否</td></tr>
-            <tr><td>照护记录</td><td>瓶喂、亲喂、辅食、尿布、睡眠、洗澡、体温、用药、疫苗、里程碑等，含备注与照片</td><td>本机 SwiftData</td><td>同步到你自己的 iCloud，被邀请的家庭成员可见</td><td>否</td></tr>
-            <tr><td>待办与提醒</td><td>你添加的待办事项、提醒时间与重复规则</td><td>本机 SwiftData</td><td>同步到你自己的 iCloud</td><td>否</td></tr>
-            <tr><td>家庭与成员</td><td>家庭名称、邀请码、成员显示名</td><td>本机 SwiftData</td><td>同步到你自己的 iCloud（家庭目录）</td><td>否</td></tr>
+            <tr><td>宝贝档案</td><td>昵称、阶段、参考性别、出生日期与出生身高体重、可选照片</td><td>本机 SwiftData</td><td>个人模式同步到自己的 iCloud；家庭模式同步到创建者 iCloud 共享区，被邀请成员可见</td><td>否</td></tr>
+            <tr><td>照护记录</td><td>瓶喂、亲喂、辅食、尿布、睡眠、洗澡、体温、用药、疫苗、里程碑等，含备注与照片</td><td>本机 SwiftData</td><td>个人模式同步到自己的 iCloud；家庭模式同步到创建者 iCloud 共享区，被邀请成员可见</td><td>否</td></tr>
+            <tr><td>待办与提醒</td><td>你添加的待办事项、提醒时间与重复规则</td><td>本机 SwiftData</td><td>个人模式同步到自己的 iCloud；家庭模式同步到创建者 iCloud 共享区</td><td>否</td></tr>
+            <tr><td>家庭与成员</td><td>家庭名称、成员显示名</td><td>本机 SwiftData</td><td>同步到创建者的 iCloud CloudKit 共享区</td><td>否</td></tr>
+            <tr><td>公共邀请目录</td><td>业务字段仅 6 位邀请码、CKShare 邀请链接；当前版本不再写入家庭名称（另含 CloudKit 系统记录元数据）</td><td>Apple CloudKit public database</td><td>用于通过邀请码/链接找到家庭共享区</td><td>技术上可见；按最小化处理，不含成员名、记录或照片</td></tr>
             <tr><td>照片</td><td>你为单条记录选择或拍摄的图片（最多 6 张）</td><td>本机 App 私有存储</td><td>随所属记录同步</td><td>否</td></tr>
             <tr><td>计时状态</td><td>开始、暂停、继续、结束时间和会话标识</td><td>本机 SwiftData / ActivityKit</td><td>不同步（仅本机）</td><td>否</td></tr>
             <tr><td>订阅与权益状态</td><td>Plus / Family 商品标识、有效期与解锁状态；不含付款明细</td><td>本机 SwiftData 与 App Group；购买与账单由 Apple 处理</td><td>仅 Family 凭证随家庭共享同步</td><td>否（我们看不到你的付款信息）</td></tr>
@@ -158,7 +159,7 @@
       <section id="storage" aria-labelledby="storage-title">
         <h2 id="storage-title"><span class="section-number">06</span>保存、导出和删除</h2>
         <p class="h2-en">Retention, export, and deletion</p>
-        <p>资料会一直保存在这台 iPhone 的 App 存储中，直到你删除记录、清除数据或删除 App。个人模式会镜像到你自己的 iCloud 私有库；家庭共享模式会保存到对应 CloudKit 共享区。当前 App 提供 records.csv 文本导出，照片与证件文件的完整备份能力仍在完善中。</p>
+        <p>资料会一直保存在这台 iPhone 的 App 存储中，直到你删除记录、清除数据或删除 App。个人模式会镜像到你自己的 iCloud 私有库；家庭共享模式会保存到创建者 iCloud 的 CloudKit 共享区。当前 App 提供 records.csv 文本导出，照片与证件文件的完整备份能力仍在完善中。</p>
         <div class="action-grid">
           <div class="action-card"><b>导出记录 CSV</b><span>设置 → 数据与备份 → 仅导出记录 CSV。导出动作由你触发。</span></div>
           <div class="action-card"><b>删除单条记录</b><span>进入记录详情，按 App 提供的删除操作处理。</span></div>
@@ -176,12 +177,17 @@
         <p class="h2-en">Family Sharing and iCloud</p>
         <p><strong>家庭共享默认关闭。</strong>只有在你主动创建家庭或输入邀请码加入家庭时，App 才会通过 Apple 的 CloudKit 同步数据。未开启时，你的全部数据只留在这台 iPhone 上。</p>
         <p class="small-en">Family Sharing is off by default. CloudKit sync starts only when you create or join a family. Otherwise all data stays on this iPhone.</p>
-        <h3>同步到哪里</h3>
-        <p>数据保存在<strong>你自己的 iCloud 账户</strong>的私有数据库与共享空间中，由 Apple 托管。</p>
+        <h3>同步到哪里、占用谁的空间</h3>
+        <p>个人模式使用每个用户自己的 iCloud 私有库。BabyOneDay 家庭模式由<strong>家庭创建者（Owner）</strong>创建 CloudKit 共享区：家庭宝宝档案、记录、待办、照片、成员信息和 Family 凭证主要占用创建者的 iCloud 空间；受邀成员保留本机数据/缓存并可读写共享区。</p>
+        <p class="small-en">Personal mode uses each user’s private iCloud database. BabyOneDay Family uses a CloudKit shared zone created by the family owner: shared records primarily count against the owner’s iCloud storage, while members keep local data/cache and can read and write the shared zone.</p>
         <ul>
-          <li><strong>开发者无法访问</strong>你 iCloud 中的任何记录，我们没有后台、没有账号系统，也拿不到你的 Apple ID。</li>
-          <li><strong>只有你邀请并成功加入的家庭成员能看到</strong>共享范围内的资料。没有邀请码的人无法访问。</li>
-          <li>同步范围见第 04 节：宝宝档案、照护记录（含备注与照片）、待办、家庭与成员信息、订阅凭证。<strong>进行中的计时状态不同步</strong>。</li>
+          <li><strong>家庭容量：</strong>最多 6 人，即创建者 1 人 + 受邀者 5 人。</li>
+          <li><strong>家庭成员需登录各自可用的 iCloud 账号，但不需要加入 Apple 系统的家庭共享，也不要求共享 Apple iCloud+ 存储空间。</strong></li>
+          <li><strong>开发者无法访问</strong>共享区中的记录内容、成员名或照片；我们没有业务后台和账号系统，也拿不到你的 Apple ID。</li>
+          <li><strong>例外要精确说明：</strong>Apple CloudKit public database 中有一份最小化邀请目录，用于把 6 位邀请码映射到 CKShare 链接。当前版本只写入邀请码和邀请链接，不再写入家庭名称；升级后的维护流程会清除旧版本曾写入的家庭名称。该目录不包含成员名、照护记录或照片。</li>
+          <li><strong>同步限制：</strong>成员未登录 iCloud、网络失败或创建者 iCloud 空间不足时，共享/同步可能暂停；已保存在本机的记录不会被删除。</li>
+          <li><strong>订阅过期：</strong>Family Annual 过期后家庭协作和成员派生 Plus 暂停；已有记录保留，重新订阅后可继续协作。</li>
+          <li>只有被邀请并成功加入的家庭成员能看到共享资料；没有有效邀请码/链接的人无法访问。<strong>进行中的计时状态不同步</strong>。</li>
         </ul>
         <h3>如何停止共享</h3>
         <div class="action-grid">
@@ -234,6 +240,7 @@
           <li>本机存储受益于 iOS 的 App 沙盒和数据保护，但 App 不能替代设备密码、备份或安全保管。</li>
           <li>ZIP、CSV 和分享内容一旦导出，后续安全性由你选择的目标 App、云端服务或接收人控制。</li>
           <li>请不要在共享设备上保存敏感记录，除非你了解并接受该设备的登出、锁定和备份策略。</li>
+          <li>调试、分析和运营不得使用真实用户的家庭记录、成员名或照片；工程验证只使用测试账号和测试家庭。公共邀请目录中的邀请码/链接按最小化敏感数据处理，不写入日志。</li>
         </ul>
       </section>
 
@@ -262,7 +269,8 @@
           <li>更正系统权限说明：补充相机、相册写入、日历；修正相册读取方式的描述。</li>
           <li>更正“开发者不收集”的表述：本机数据确实不上传我们的服务器，但存在上述两种数据离开设备的情形。</li>
         </ul>
-        <p>本政策自 2026-10-15 起作为 1.2 版生效。开发者名称、法定主体、支持邮箱与地区信息如下。</p>
+        <p>本政策自 2026-11-07 起作为 1.3 版生效。相比 1.2 版，本次修订：明确家庭共享区占用创建者 iCloud 空间；说明 6 人容量、iCloud/网络/空间限制、订阅过期后的保留策略；更正公共邀请目录的可见性边界，并说明新版本不再把家庭名称写入公共目录、升级后会清除旧字段。</p>
+        <p>本政策此前自 2026-10-15 起作为 1.2 版生效。开发者名称、法定主体、支持邮箱与地区信息如下。</p>
         <div class="callout">
           <b>开发者信息</b>
           开发者：Jun Wang（个人开发者）<br>支持邮箱：<a href="mailto:me.ajun@qq.com">me.ajun@qq.com</a><br>开发者所在地区：中国内地
@@ -272,7 +280,7 @@
     </main>
 
     <footer class="site-footer">
-      <span>© 2026 一日一宝 BabyOneDay · 隐私政策 v1.2</span>
+      <span>© 2026 一日一宝 BabyOneDay · 隐私政策 v1.3</span>
       <nav class="footer-links" aria-label="页脚导航">
         <a href="terms-of-service.html">服务条款</a>
         <a href="support.html">支持</a>

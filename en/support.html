@@ -112,6 +112,22 @@
             <summary>Why has iCloud sync not started?</summary>
             <div class="faq-body">Personal mode stores data locally with SwiftData and mirrors it to your own private iCloud database. Family Sharing uses a CloudKit shared zone after you create or join a family. Sync requires iCloud sign-in, network availability, and a valid Family subscription state.</div>
           </details>
+          <details>
+            <summary>Whose iCloud storage does Family use?</summary>
+            <div class="faq-body">Family cloud data lives in a CloudKit shared zone created by the family owner and primarily counts against the owner’s storage. Members keep local data/cache and can read and write the shared zone. We recommend that the family member who will use the app long term and has sufficient iCloud storage create the family.</div>
+          </details>
+          <details>
+            <summary>Do we need Apple Family Sharing or shared iCloud+?</summary>
+            <div class="faq-body">No. BabyOneDay Family is in-app collaboration joined with a six-character code or link, for up to 6 members (owner plus 5 invitees). Members do not need to be in the owner’s Apple Family Sharing group or share Apple iCloud+ storage, but each member must be signed in to an available iCloud account.</div>
+          </details>
+          <details>
+            <summary>Will records be lost if the owner runs out of iCloud space or a member is offline?</summary>
+            <div class="faq-body">No. Records already saved on device are not deleted for this reason. Missing iCloud sign-in, network failure, or insufficient owner storage pauses sharing/sync until sign-in, network, or storage is restored. If Family Annual expires, existing records also remain; family collaboration and member-derived Plus pause.</div>
+          </details>
+          <details>
+            <summary>What is stored in the public invitation directory?</summary>
+            <div class="faq-body">The current version stores only the six-character invitation code and CKShare link as business fields (CloudKit system record metadata also exists) needed to locate the family shared zone. It does not store the family name, member names, care records, or photos. Treat codes and links as sensitive and regenerate them when needed.</div>
+          </details>
         </div>
       </section>
 

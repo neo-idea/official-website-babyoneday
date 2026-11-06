@@ -112,6 +112,22 @@
             <summary>iCloud 为什么没有开始同步？</summary>
             <div class="faq-body">个人模式默认使用 SwiftData 本地存储并镜像到你自己的 iCloud 私有库；家庭共享会在你创建或加入家庭后使用 CloudKit 共享区。需要登录 iCloud、可用网络和有效家庭订阅状态。</div>
           </details>
+          <details>
+            <summary>家庭数据占用谁的 iCloud 空间？</summary>
+            <div class="faq-body">家庭云端数据保存在创建者（Owner）的 iCloud CloudKit 共享区，主要占用创建者空间；成员保留本机数据/缓存并可读写共享区。建议由长期使用、iCloud 空间充足的家人创建家庭。</div>
+          </details>
+          <details>
+            <summary>需要加入 Apple 的“家庭共享”或共享 iCloud+ 吗？</summary>
+            <div class="faq-body">不需要。BabyOneDay 家庭是 App 内的家庭协作，通过 6 位邀请码或链接加入，最多 6 人（创建者 + 5 位受邀者）。它不要求成员在 Apple Family Sharing 里，也不要求共享 Apple iCloud+ 存储空间；但每位成员需登录各自可用的 iCloud 账号。</div>
+          </details>
+          <details>
+            <summary>创建者 iCloud 空间不足或家人离线时会丢记录吗？</summary>
+            <div class="faq-body">不会因此删除本机已保存记录。未登录 iCloud、网络失败或创建者空间不足会让共享/同步暂停；恢复登录、网络或空间后可继续同步。Family Annual 过期也同样保留已有记录，只暂停家庭协作和成员派生 Plus。</div>
+          </details>
+          <details>
+            <summary>公共邀请目录里有什么？</summary>
+            <div class="faq-body">当前版本业务字段只保存 6 位邀请码和 CKShare 邀请链接（另含 CloudKit 系统记录元数据），用于把码映射到家庭共享区；不保存家庭名称、成员名、照护记录或照片。邀请码和链接请当作敏感信息转发，可随时重新生成。</div>
+          </details>
         </div>
       </section>
 
