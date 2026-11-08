@@ -1,4 +1,4 @@
-# 一日一宝 BabyOneDay official website
+# 一日一宝 Daybub official website
 
 > ⚠️ **警告：请勿直接修改此镜像仓库！本仓库属于镜像仓库**，由私有 monorepo `neo-idea/official-website` 自动同步发布，手动修改会被下次发布覆盖。
 
