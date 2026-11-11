@@ -1,22 +1,17 @@
-# 一日一宝 Daybub official website
+# Daybub: Baby Tracker official website
 
 > ⚠️ **警告：请勿直接修改此镜像仓库！本仓库属于镜像仓库**，由私有 monorepo `neo-idea/official-website` 自动同步发布，手动修改会被下次发布覆盖。
 
 Static, dependency-free production site.
 
-The home page uses the latest bilingual product captures from the iOS
-screenshot project. Homepage images are locale-specific WebP files
-(`home-zh.webp`, `home-en.webp`, and so on);
-`assets/social-zh.jpg` and `assets/social-en.jpg` are the 1.20:1 locale-specific
-Open Graph/Twitter share cards. Each homepage image exposes 360w / 480w / 720w
-candidates so phones do not download the retina-sized capture unnecessarily.
-Product captures load eagerly: the hero uses `fetchpriority="high"` while the
-remaining visuals use `fetchpriority="low"`, so full-page marketing screenshots
-never contain lazy-loading placeholders without hurting the LCP resource race.
-Legal and support pages intentionally keep a narrower reading layout through
-`<body class="legal">.
-The home pages also include localized Open Graph/Twitter cards,
-`SoftwareApplication` structured data, and the Apple smart app banner.
+The bilingual homepage leads with the Daybub App Store banner. Responsive WebP
+candidates (`assets/daybub-banner-900.webp`, `1440`, and `2400`) keep the hero
+light while preserving text readability on retina displays. On phones the banner
+uses a 16:10 crop focused on the headline; on desktop it keeps the full 3.03:1
+creative. `assets/daybub-social.jpg` is the shared 1200×630 Open Graph/Twitter
+card. Product captures below the hero remain locale-specific WebP files and use
+responsive 360w / 480w / 720w candidates. The banner loads eagerly with
+`fetchpriority="high"` while later visuals use `fetchpriority="low"`.
 
 - Chinese home (default): `https://babyoneday.zpad.app/`
 - English home: `https://babyoneday.zpad.app/en/`
