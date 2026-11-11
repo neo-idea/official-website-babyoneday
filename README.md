@@ -26,6 +26,12 @@ current browser session, so following an internal link does not undo a manual
 language choice. Both language versions expose equivalent content,
 per-page canonical URLs, language switches, and `hreflang` alternates.
 
+## 2026-11-11 update
+
+- Rebranded the site from BabyOneDay to **Daybub: Baby Tracker**.
+- Added the supplied App Store banner as the bilingual homepage hero.
+- Updated canonical App Store links, metadata, structured data, and social card.
+
 ## Deployment
 
 This directory is published by the monorepo workflow to
